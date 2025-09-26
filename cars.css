@@ -1,3 +1,4 @@
+/* Global styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,6 +6,11 @@ body {
   color: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
 header {
   background: lightgray
     url("https://images.unsplash.com/photo-1566305977571-5666677c6e98?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGdyZXl8ZW58MHx8MHx8fDA%")
@@ -27,6 +33,7 @@ header {
   margin-bottom: 10px;
 }
 
+/* Navigation */
 nav a {
   color: blue;
   text-decoration: none;
@@ -38,6 +45,7 @@ nav a:hover {
   color: black;
 }
 
+/* Hero Section */
 .hero {
   background: url("https://images.unsplash.com/photo-1613206485381-b028e578e791?w=1200&auto=format&fit=crop&q=80")
     center/cover no-repeat;
@@ -99,6 +107,7 @@ nav a:hover {
   background: darkred;
 }
 
+/* Footer */
 footer {
   background: darkblue;
   color: white;
@@ -111,6 +120,7 @@ footer a {
   text-decoration: none;
 }
 
+/* Products Grid */
 .products {
   max-width: 1000px;
   margin: 40px auto;
@@ -158,10 +168,7 @@ footer a {
   font-size: 0.85rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Close button (for modals or overlays) */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -170,9 +177,54 @@ html {
   cursor: pointer;
 }
 
-/* Hidden class for toggling views */
+/* Cart Styles */
 
-/* Cart */
+/* Cart Icon */
+.cart-icon {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.cart-icon span#cart-count,
+#cart-count {
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  /* The extracted style for cart-icon #cart-count */
+  display: inline-block;
+}
+
+/* Delete button for cart items */
+.delete-btn {
+  margin-left: 10px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* Cart container */
+.cart-container {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #f9f9f9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  z-index: 1000;
+}
+
 .cart-container.show {
   right: 0;
 }
@@ -197,21 +249,34 @@ html {
   text-align: right;
 }
 
-/* Cart Icon */
-.cart-icon {
-  display: inline-block;
-  font-size: 1.5rem;
-  cursor: pointer;
-  position: relative;
+/* Utility classes */
+.hidden {
+  display: none;
 }
 
-#cart-count {
-  background: red;
-  color: white;
-  font-size: 0.8rem;
-  padding: 2px 6px;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
-  right: -10px;
+/* Fullscreen modal (product detail view) */
+.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 2000;
+}
+
+/* Back button inside fullscreen */
+.back-btn {
+  background: #ccc;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  background: #bbb;
 }
