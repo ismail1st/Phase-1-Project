@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ismail Auto Parts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./cars.css" />
+    <style>
+      /* Minimal inline style for pointer on cart icon */
+      .cart-icon {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 1.3rem;
+      }
+      .cart-icon span#cart-count {
+        background: red;
+        color: white;
+        border-radius: 50%;
+        padding: 0 6px;
+        font-size: 0.8rem;
+      }
+      .delete-btn {
+        margin-left: 10px;
+        padding: 2px 6px;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+      /* Optional: Make cart-container fixed sidebar */
+      .cart-container {
+        position: fixed;
+        right: 0;
+        top: 60px;
+        width: 300px;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #f9f9f9;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        z-index: 1000;
+      }
+      .hidden {
+        display: none;
+      }
+      .full-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.95);
+        overflow-y: auto;
+        padding: 20px;
+        z-index: 2000;
+      }
+      .back-btn {
+        background: #ccc;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+      .back-btn:hover {
+        background: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/ismail logo-Photoroom.png"
+          alt="Ismail Auto Parts Logo"
+          width="150"
+          height="auto"
+        />
+      </div>
+      <nav>
+        <a href="#" onclick="goHome()">Home</a>
+        <a href="#products-container">Shop Parts</a>
+        <a href="#contact-section">Contact</a>
+        <a href="#footer-about">About Us</a>
+        <a href="#footer-services">Our Services</a>
+        <!-- Cart icon as a button -->
+        <button
+          class="cart-icon"
+          aria-label="View cart"
+          onclick="scrollToCart()"
+        >
+          🛒 <span id="cart-count" aria-live="polite">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h1>Quality Auto Parts & Expert Service</h1>
+      <p>Your trusted auto parts supplier & repair specialist</p>
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Search for auto parts..."
+          id="search-input"
+          aria-label="Search for auto parts"
+        />
+        <button type="button" onclick="searchProducts()">Search</button>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products" id="products-container"></section>
+
+    <!-- Fullscreen Product Detail View -->
+    <section
+      id="product-detail-view"
+      class="hidden full-screen"
+      aria-modal="true"
+      role="dialog"
+    >
+      <button class="back-btn" type="button" onclick="goHome()">← Back</button>
+      <div class="detail-content">
+        <img id="detail-image" src="" alt="Product Image" />
+        <h2 id="detail-name"></h2>
+        <p id="detail-description"></p>
+        <p>
+          <strong>KES <span id="detail-price"></span></strong>
+        </p>
+        <p>
+          <em>Category: <span id="detail-category"></span></em>
+        </p>
+        <button type="button" id="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div
+      class="cart-container hidden"
+      id="cart-container"
+      aria-live="polite"
+      aria-label="Shopping Cart"
+    >
+      <h3>Your Cart</h3>
+      <div id="cart-items"></div>
+      <p class="cart-total">Total: KES <span id="cart-total">0</span></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="contact-info" id="contact-section">
+        <p><strong>Ismail Auto Parts</strong></p>
+        <p>123 Main Street, Nairobi, Kenya</p>
+        <p>Email: info@ismailautoparts.co.ke | Phone: +254 700 123456</p>
+      </div>
+      <div class="footer-links">
+        <a href="#footer-about">About Us</a> |
+        <a href="#footer-services">Our Services</a>
+      </div>
+      <div id="footer-about" class="footer-content">
+        <h3>About Ismail Auto Parts</h3>
+        <p>
+          Ismail Auto Parts is your trusted source for high-quality auto parts
+          and professional car repair services. Located in Nairobi, we are
+          committed to excellence and customer satisfaction.
+        </p>
+      </div>
+      <div id="footer-services" class="footer-content">
+        <h3>Our Services</h3>
+        <p>
+          We offer expert car diagnostics, maintenance, and repair services. We
+          fix any car fault professionally and quickly.
+        </p>
+      </div>
+      <div class="social-media">
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+      </div>
+      <p>&copy; 2025 Ismail Auto Parts. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./cars.js"></script>
+  </body>
+</html>

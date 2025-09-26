@@ -1,0 +1,193 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "Steering Wheel Covers",
+      "variants": [
+        {
+          "id": 1,
+          "name": "Leather Steering Wheel Cover",
+          "description": "Premium leather cover for ultimate comfort.",
+          "price": 1000,
+          "image": "images/leather.jpeg"
+        },
+        {
+          "id": 2,
+          "name": "Fabric Steering Wheel Cover",
+          "description": "Soft fabric cover with breathable material.",
+          "price": 900,
+          "image": "images/fabric.jpeg"
+        },
+        {
+          "id": 3,
+          "name": "Custom Steering Wheel Cover",
+          "description": "Non-slip design ideal for performance driving.",
+          "price": 1200,
+          "image": "images/customSC.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Tyres",
+      "variants": [
+        {
+          "id": 4,
+          "name": "All-Season Tyres",
+          "description": "Reliable tyres for all weather conditions.",
+          "price": 6000,
+          "image": "images/allseason.jpeg"
+        },
+        {
+          "id": 5,
+          "name": "Performance Tyres",
+          "description": "High grip tyres for sport driving.",
+          "price": 8000,
+          "image": "images/sport.jpeg"
+        },
+        {
+          "id": 6,
+          "name": "Winter-Tyres",
+          "description": "Durable tyres for tough terrain and 4x4 vehicles.",
+          "price": 7500,
+          "image": "images/winter.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Gearbox Oil",
+      "variants": [
+        {
+          "id": 7,
+          "name": "CVT Nissan Gearbox Oil",
+          "description": "High quality synthetic oil for smooth gear changes.",
+          "price": 3500,
+          "image": "images/nissancvt.jpeg"
+        },
+        {
+          "id": 8,
+          "name": "CVT Toyota Gearbox Oil",
+          "description": "Affordable mineral-based gearbox oil.",
+          "price": 2500,
+          "image": "images/toyotacvt.jpeg"
+        },
+        {
+          "id": 9,
+          "name": "Manual Gearbox Oil",
+          "description": "Balanced blend for performance and protection.",
+          "price": 3000,
+          "image": "images/manual.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Car Perfumes",
+      "variants": [
+        {
+          "id": 10,
+          "name": "Ocean Breeze",
+          "description": "Relaxing lavender fragrance.",
+          "price": 600,
+          "image": "images/ocean.jpg"
+        },
+        {
+          "id": 11,
+          "name": "lily Scent",
+          "description": "Fresh citrus fragrance.",
+          "price": 600,
+          "image": "images/lilly.jpg"
+        },
+        {
+          "id": 12,
+          "name": "GrapeFruit",
+          "description": "Clean and refreshing marine scent.",
+          "price": 500,
+          "image": "images/grapefruit.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Seat Covers",
+      "variants": [
+        {
+          "id": 13,
+          "name": "Leather Seat Covers",
+          "description": "Luxurious and durable leather covers.",
+          "price": 15000,
+          "image": "images/seat-leather.jpeg"
+        },
+        {
+          "id": 14,
+          "name": "Fabric Seat Covers",
+          "description": "Comfortable fabric seat covers.",
+          "price": 12000,
+          "image": "images/fabricdownload.jpeg"
+        },
+        {
+          "id": 15,
+          "name": "Custom Printed Seat Covers",
+          "description": "Personalized designs for your car's interior.",
+          "price": 15000,
+          "image": "images/customseat.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Rims",
+      "variants": [
+        {
+          "id": 16,
+          "name": "Alloy Rims 17 inch",
+          "description": "Stylish and lightweight alloy rims.",
+          "price": 50000,
+          "image": "images/Alloy.jpeg"
+        },
+        {
+          "id": 17,
+          "name": "Chrome Rims 18 inch",
+          "description": "Shiny chrome finish for a bold look.",
+          "price": 70000,
+          "image": "images/chrome.jpeg"
+        },
+        {
+          "id": 18,
+          "name": "Matte Black Rims 16 inch",
+          "description": "Aggressive styling with matte finish.",
+          "price": 40000,
+          "image": "images/Matte.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Headlights",
+      "variants": [
+        {
+          "id": 19,
+          "name": "LED Headlights",
+          "description": "Bright and energy-efficient LED lighting.",
+          "price": 5000,
+          "image": "images/led.jpeg"
+        },
+        {
+          "id": 20,
+          "name": "Halogen Headlights",
+          "description": "Reliable and affordable halogen lamps.",
+          "price": 3000,
+          "image": "images/halogen.jpeg"
+        },
+        {
+          "id": 21,
+          "name": "Projector Headlights",
+          "description": "Focused beam with stylish appearance.",
+          "price": 11000,
+          "image": "images/projector.jpeg"
+        }
+      ]
+    }
+  ]
+}
